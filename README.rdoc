@@ -1,10 +1,16 @@
-* Ruby version - ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-linux]
+* System setup - README at https://github.com/LJruby/basics
 
-* System dependencies, configuration - https://github.com/LJruby/basics
+* ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-linux]
 
-* Versions
+* Rails 4.2.0
+
+* App versions
+
+-v2
+  -add title presence validation for Idea
+  -add Status & Idea relations
 
 -v1
   -introduce background
-  -UI fields renaming
-  -layout changes
+  -rename index header
+  -change layout
