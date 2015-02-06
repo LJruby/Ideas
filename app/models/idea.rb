@@ -1,4 +1,9 @@
 class Idea < ActiveRecord::Base
-  validates_presence_of :title
+  validates :title,
+    presence: true,
+    uniqueness: true
+    
   belongs_to :status
+  belongs_to :customer
+  belongs_to :category
 end

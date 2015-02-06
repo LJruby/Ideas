@@ -4,13 +4,17 @@
 
 * Rails 4.2.0
 
-* App versions
+* App versions:
 
--v2
+v3
+  -add Category & Customer models + associations
+  -add some validators
+
+v2
   -add title presence validation for Idea
   -add Status & Idea relations
 
--v1
+v1
   -introduce background
   -rename index header
   -change layout
