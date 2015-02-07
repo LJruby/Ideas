@@ -3,7 +3,7 @@
 one:
   title: MyString
   description: MyText
-  vote: 1
+  votes: 1
   status_id: 1
   category_id: 1
   customer_id: 1
@@ -11,7 +11,7 @@ one:
 two:
   title: MyString
   description: MyText
-  vote: 1
+  votes: 1
   status_id: 1
   category_id: 1
   customer_id: 1

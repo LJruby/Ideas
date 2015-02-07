@@ -6,6 +6,11 @@
 
 * App versions:
 
+v4
+  -Status, Category, Customer display values (instead of ids)
+  -rename Vote column to Votes
+  -display warning message when ideas table is empty
+
 v3
   -add Category & Customer models + associations
   -add some validators

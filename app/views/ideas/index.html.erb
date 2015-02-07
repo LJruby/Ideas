@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Ideas</h1>
-
+ 
+<% if @ideas.count == 0 %>
+  <em>No ideas found</em>
+  <br>
+<% else %>
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Vote</th>
+      <th>Votes</th>
       <th>Status</th>
       <th>Category</th>
       <th>Customer</th>
@@ -20,10 +24,10 @@
       <tr>
         <td><%= idea.title %></td>
         <td><%= idea.description %></td>
-        <td><%= idea.vote %></td>
-        <td><%= idea.status_id %></td>
-        <td><%= idea.category_id %></td>
-        <td><%= idea.customer_id %></td>
+        <td><%= idea.votes %></td>
+        <td><%= idea.status.title %></td>
+        <td><%= idea.category.title %></td>
+        <td><%= idea.customer.name %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
         <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,6 +35,7 @@
     <% end %>
   </tbody>
 </table>
+<% end %>
 
 <br>
 

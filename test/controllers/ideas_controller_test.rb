@@ -18,7 +18,7 @@ class IdeasControllerTest < ActionController::TestCase
 
   test "should create idea" do
     assert_difference('Idea.count') do
-      post :create, idea: { category_id: @idea.category_id, customer_id: @idea.customer_id, description: @idea.description, status_id: @idea.status_id, title: @idea.title, vote: @idea.vote }
+      post :create, idea: { category_id: @idea.category_id, customer_id: @idea.customer_id, description: @idea.description, status_id: @idea.status_id, title: @idea.title, votes: @idea.votes }
     end
 
     assert_redirected_to idea_path(assigns(:idea))
@@ -35,7 +35,7 @@ class IdeasControllerTest < ActionController::TestCase
   end
 
   test "should update idea" do
-    patch :update, id: @idea, idea: { category_id: @idea.category_id, customer_id: @idea.customer_id, description: @idea.description, status_id: @idea.status_id, title: @idea.title, vote: @idea.vote }
+    patch :update, id: @idea, idea: { category_id: @idea.category_id, customer_id: @idea.customer_id, description: @idea.description, status_id: @idea.status_id, title: @idea.title, votes: @idea.votes }
     assert_redirected_to idea_path(assigns(:idea))
   end
 

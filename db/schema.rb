@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150206113233) do
   create_table "ideas", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "vote"
+    t.integer  "votes"
     t.integer  "status_id"
     t.integer  "category_id"
     t.integer  "customer_id"
