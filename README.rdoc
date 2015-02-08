@@ -6,6 +6,11 @@
 
 * App versions:
 
+v6
+  -show.html.erb: display titles/names instead of ids
+  -additional validators for Idea scaffold
+  -_form.html.erb adds dropdown lists for required fields
+
 v5
   -add Vote model & associations
   -display votes quantity per idea
