@@ -6,4 +6,5 @@ class Idea < ActiveRecord::Base
   belongs_to :status
   belongs_to :customer
   belongs_to :category
+  has_many :votes
 end

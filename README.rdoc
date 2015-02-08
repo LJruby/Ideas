@@ -6,6 +6,13 @@
 
 * App versions:
 
+v5
+  -add Vote model & associations
+  -display votes quantity per idea
+  -remove votes from _form.html.erb and show.html.erb
+  -add password attribute to Customer
+  -create DB model graph (http://ondras.zarovi.cz/sql/demo/ >Load>Server>Load>LJruby-ideas)
+
 v4
   -Status, Category, Customer display values (instead of ids)
   -rename Vote column to Votes
