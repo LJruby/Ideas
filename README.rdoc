@@ -11,7 +11,7 @@ v5
   -display votes quantity per idea
   -remove votes from _form.html.erb and show.html.erb
   -add password attribute to Customer
-  -create DB model graph (http://ondras.zarovi.cz/sql/demo/ >Load>Server>Load>LJruby-ideas)
+  -create DB model graph - http://ondras.zarovi.cz/sql/demo/ Load>Server>Load>LJruby-ideas
 
 v4
   -Status, Category, Customer display values (instead of ids)
