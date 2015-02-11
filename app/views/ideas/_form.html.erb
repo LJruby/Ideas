@@ -21,15 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :status_id %>*<br>
-    <%= f.select :status_id, options_for_select(Status.all.collect{ |stat| [ stat.title, stat.id ] }), {prompt: 'Select status'} %>
+    <%= f.select :status_id, options_for_select(@statuses.collect{ |stat| [ stat.title, stat.id ] }), {prompt: 'Select status'} %>
   </div>
   <div class="field">
     <%= f.label :category_id %>*<br>
-    <%= f.select :category_id, options_for_select(Category.all.collect{ |cat| [ cat.title, cat.id ] }), {prompt: 'Select category'}  %>
+    <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.title, cat.id ] }), {prompt: 'Select category'}  %>
   </div>
   <div class="field">
     <%= f.label :customer_id %>*<br>
-    <%= f.select :customer_id, options_for_select(Customer.all.collect{ |cust| [ cust.name, cust.id ] }), {prompt: 'Select customer'}  %>
+    <%= f.select :customer_id, options_for_select(@customers.collect{ |cust| [ cust.name, cust.id ] }), {prompt: 'Select customer'}  %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,15 +1,34 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :get_statuses, :get_categories, :get_customers, only: [:new, :edit, :create]
+
+  def get_statuses
+    @statuses = Status.all
+  end
+
+  def get_categories
+    @categories = Category.all
+  end
+
+  def get_customers
+    @customers = Customer.all
+  end
 
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.all
+		@ideas = Idea.all
   end
 
   # GET /ideas/1
   # GET /ideas/1.json
+  # GET /ideas/1.xml
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @idea }
+      format.xml { render xml: @idea }
+    end
   end
 
   # GET /ideas/new
@@ -25,7 +44,6 @@ class IdeasController < ApplicationController
   # POST /ideas.json
   def create
     @idea = Idea.new(idea_params)
-
     respond_to do |format|
       if @idea.save
         format.html { redirect_to @idea, notice: 'Idea was successfully created.' }

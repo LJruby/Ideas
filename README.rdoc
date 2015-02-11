@@ -4,7 +4,13 @@
 
 * Rails 4.2.0
 
-* App versions:
+* App enhancements:
+
+v7
+  -only controllers should be calling Models (moving stuff from _form.html.erb)
+  -'show' action extended with json and xml
+  -moved 'notice' messages to layouts/application.html.erb
+  -some additional routes added
 
 v6
   -show.html.erb: display titles/names instead of ids
