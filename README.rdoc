@@ -7,7 +7,7 @@
 * Idea scaffold app enhancements:
 
 v8
-	-add paperclip gem (easy upload management)
+  -add paperclip gem (easy upload management)
 	-add bcrypt gem (password_digest)
 	-rename Customer to User model
 	-add Role model (updated DB graph)
