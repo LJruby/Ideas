@@ -3,7 +3,11 @@
 one:
   name: MyString
   email: MyString
+  password: MyString
+  role_id: 1
 
 two:
   name: MyString
   email: MyString
+  password: MyString
+  role_id: 1

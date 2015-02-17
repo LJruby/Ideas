@@ -4,7 +4,14 @@
 
 * Rails 4.2.0
 
-* App enhancements:
+* Idea scaffold app enhancements:
+
+v8
+	-add paperclip gem (easy upload management)
+	-add bcrypt gem (password_digest)
+	-rename Customer to User model
+	-add Role model (updated DB graph)
+	-added validators for Vote model
 
 v7
   -only controllers should be calling Models (moving stuff from _form.html.erb)

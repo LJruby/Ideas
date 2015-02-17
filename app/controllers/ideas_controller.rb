@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  before_action :get_statuses, :get_categories, :get_customers, only: [:new, :edit, :create]
+  before_action :get_statuses, :get_categories, :get_users, only: [:new, :edit, :create]
 
   def get_statuses
     @statuses = Status.all
@@ -10,8 +10,8 @@ class IdeasController < ApplicationController
     @categories = Category.all
   end
 
-  def get_customers
-    @customers = Customer.all
+  def get_users
+    @users = User.all
   end
 
   # GET /ideas
@@ -87,6 +87,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:title, :description, :votes, :status_id, :category_id, :customer_id)
+      params.require(:idea).permit(:title, :description, :votes, :status_id, :category_id, :user_id)
     end
 end
