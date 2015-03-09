@@ -10,18 +10,26 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @idea.status.title %>
+  <%= @idea.status.name %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @idea.category.title %>
+  <%= @idea.category.name %>
 </p>
 
 <p>
   <strong>User:</strong>
   <%= @idea.user.name %>
 </p>
+
+<% if @idea.attachment_file_name != nil %>
+<p>
+  <strong>Attachment:</strong>
+  <br>
+  <%= image_tag @idea.attachment.url %>
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

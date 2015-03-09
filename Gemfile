@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # Upload management
-gem 'paperclip', '~> 4.2.1'
+gem 'paperclip'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

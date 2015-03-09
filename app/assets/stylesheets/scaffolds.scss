@@ -1,5 +1,5 @@
 body {
-  text-align: center;
+  text-align: left;
   background-image: url('bulb.png');
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -7,7 +7,7 @@ body {
 }
 
 table {
-  margin: auto;
+  margin: left;
   text-align: left;
   border: 2px solid black;
 }
@@ -51,7 +51,7 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
-  margin: auto;
+  margin: left;
 }
 
 #error_explanation {
@@ -59,7 +59,7 @@ div {
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
-  margin: auto;
+  margin: left;
   margin-bottom: 20px;
   background-color: #f0f0f0;
   h2 {

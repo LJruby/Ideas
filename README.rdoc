@@ -6,6 +6,11 @@
 
 * Idea scaffold app enhancements:
 
+v9
+  -add paperclip attachment to Idea model
+  -rename "title" to "name" in some tables (updated DB graph)
+  -add email downcase for Customer model
+
 v8
   -add paperclip gem (easy upload management)
   -add bcrypt gem (password_digest)
