@@ -6,6 +6,12 @@
 
 * Idea scaffold app enhancements:
 
+v10
+  -File attached? column on index page
+  -stylesheets modified to have left margin
+  -add file_field to _form
+  -show photos only when uploaded
+  
 v9
   -add paperclip attachment to Idea model
   -rename "title" to "name" in some tables (updated DB graph)
