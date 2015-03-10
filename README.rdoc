@@ -9,6 +9,7 @@
 v11
   -add devise gem, disable bcrypt
   -split by status on index
+  -passing user_id (hidden)
 
 v10
   -File attached? column on index page

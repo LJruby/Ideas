@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  before_action :get_statuses, :get_categories, :get_users, only: [:new, :show, :edit, :update, :destroy, :index]
+  before_action :get_statuses, :get_categories, :get_users, only: [:new, :create, :show, :edit, :update, :destroy, :index]
 	before_action :authenticate_user!
 	
 	def get_statuses
