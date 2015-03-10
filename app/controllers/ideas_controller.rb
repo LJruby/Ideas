@@ -1,8 +1,9 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  before_action :get_statuses, :get_categories, :get_users, only: [:new, :edit, :create]
-
-  def get_statuses
+  before_action :get_statuses, :get_categories, :get_users, only: [:new, :show, :edit, :update, :destroy, :index]
+	before_action :authenticate_user!
+	
+	def get_statuses
     @statuses = Status.all
   end
 
@@ -87,6 +88,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:title, :description, :votes, :status_id, :category_id, :user_id, :attachment)
+      params.require(:idea).permit(:title, :description, :status_id, :category_id, :user_id, :attachment)
     end
 end

@@ -1,40 +1,44 @@
-<h1>Ideas</h1>
- 
+
 <% if @ideas.count == 0 %>
+  <br>
   <em>No ideas found</em>
   <br>
 <% else %>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Votes</th>
-      <th>Status</th>
-      <th>Category</th>
-      <th>User</th>
-      <th>File attached?</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @ideas.each do |idea| %>
-      <tr>
-        <td><%= idea.title %></td>
-        <td><%= idea.description %></td>
-        <td><%= idea.votes.count %></td>
-        <td><%= idea.status.name %></td>
-        <td><%= idea.category.name %></td>
-        <td><%= idea.user.name %></td>
-        <td><%= idea.attachment? %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @statuses.each do |status| %>
+	<% if status.ideas.count > 0 %>
+	<h1>Ideas with status <%= status.name %>:</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Votes</th>
+				<th>Category</th>
+				<th>Attached file</th>
+				<th colspan="3"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @ideas.each do |idea| %>
+				<% if idea.status==status %>
+				<tr>
+					<td><%= idea.title %></td>
+					<td><%= idea.description %></td>
+					<td><%= idea.votes.count %></td>
+					<td><%= idea.category.name %></td>
+					<td><%= idea.attachment_file_name %></td>
+					<td><%= link_to 'Show', idea %></td>
+					<td><%= link_to_if idea.user==current_user, 'Edit', edit_idea_path(idea) %></td>
+					<td><%= link_to_if idea.user==current_user, 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+				<% end %>
+			<% end %>
+		</tbody>
+	</table>
+	<% end %>
+<% end %>
 <% end %>
 
 <br>

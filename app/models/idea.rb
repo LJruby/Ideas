@@ -10,6 +10,7 @@ class Idea < ActiveRecord::Base
   belongs_to :category
   has_many :votes
   
-  has_attached_file :attachment, :styles => { :medium => "300x300>", :thumb => "10x10>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :attachment, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :attachment, :content_type => /\Aimage\/.*\Z/
+
 end

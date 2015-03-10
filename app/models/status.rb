@@ -1,5 +1,5 @@
 class Status < ActiveRecord::Base
-  validates :title,
+  validates :name,
     presence: true,
     uniqueness: true
   has_many :ideas

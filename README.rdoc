@@ -6,6 +6,10 @@
 
 * Idea scaffold app enhancements:
 
+v11
+  -add devise gem, disable bcrypt
+  -split by status on index
+
 v10
   -File attached? column on index page
   -stylesheets modified to have left margin
