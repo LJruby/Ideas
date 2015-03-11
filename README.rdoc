@@ -7,7 +7,7 @@
 * Idea scaffold app enhancements:
 
 v12
-	-devise views customization
+  -devise views customization
 	-application view customization
 	-paperclip customization in ideas views (_form & show)
 	-small amendments in idea and user model
