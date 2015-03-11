@@ -11,9 +11,13 @@
 <p id="notice"><%= notice %></p>
 
 <% if user_signed_in? %>
-	<%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+	
 	<% else %>
-	<%= link_to "Log in", new_user_session_path %>
+	<li><%= link_to 'Sign in', new_user_session_path %></li>
+  <li><%= link_to 'Sign up', new_user_registration_path %></li>
+	<li><%= link_to "Forgot your password?", new_password_path(resource_name) %></li>
 <% end %>
 
 <%= yield %>

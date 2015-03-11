@@ -28,9 +28,13 @@
     <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.name, cat.id ] }), {prompt: 'Select category'}  %>
   </div>
   <div class="field">
-		<%= f.label :attachment %><br>
-    <%= f.file_field :attachment %>
-  </div>
+		<%= f.label :current_attachment %><br>
+		<%= image_tag @idea.attachment.url(:small) %>
+	</div>
+	<div class="field">
+		<%= f.label :upload_new_attachment %><br>
+		<%= f.file_field :attachment %>
+	</div>
   <div class="hidden_field">
 		<%= f.hidden_field :user_id, :value => current_user.id %><br>
   </div>

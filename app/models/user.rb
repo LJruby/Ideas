@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   has_many :votes
   belongs_to :role
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
