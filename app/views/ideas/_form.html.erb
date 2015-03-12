@@ -27,10 +27,12 @@
     <%= f.label :category_id %>*<br>
     <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.name, cat.id ] }), {prompt: 'Select category'}  %>
   </div>
+  <% unless (current_page?(action: 'new') || !f.object.attachment?) %>
   <div class="field">
 		<%= f.label :current_attachment %><br>
-		<%= image_tag @idea.attachment.url(:small) %>
+		<%= image_tag f.object.attachment.url(:small) %>
 	</div>
+  <% end %>
 	<div class="field">
 		<%= f.label :upload_new_attachment %><br>
 		<%= f.file_field :attachment %>
