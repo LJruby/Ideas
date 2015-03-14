@@ -18,7 +18,17 @@
   <%= @idea.category.name %>
 </p>
 
-<% if @idea.attachment_file_name != nil %>
+<% if @vote.nil? %>
+<p>
+  <%= button_to 'Vote up', action: 'action_vote', vote_up: true %>
+</p>
+<% else %>
+<p>
+  <%= button_to 'Vote down', action: 'action_vote' %>
+</p>
+<% end %>
+
+<% if @idea.attachment_file_name %>
 <p>
   <strong>Attachment:</strong>
   <br>

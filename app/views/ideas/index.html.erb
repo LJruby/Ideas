@@ -25,14 +25,14 @@
 				<% if idea.status==status %>
 				<tr>
 					<td><%= idea.title %></td>
-					<td><%= idea.description %></td>
+					<td><%= idea.description.truncate(20) %></td>
 					<td><%= idea.votes.count %></td>
 					<td><%= idea.category.name %></td>
 					<td><%= idea.attachment_file_name %></td>
 					<td><%= link_to 'Show', idea %></td>
 					<td><%= link_to_if idea.user==current_user, 'Edit', edit_idea_path(idea) %></td>
 					<td><%= link_to_if idea.user==current_user, 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				</tr>
+        </tr>
 				<% end %>
 			<% end %>
 		</tbody>

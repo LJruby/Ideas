@@ -6,6 +6,9 @@
 
 * Idea scaffold app enhancements:
 
+v13
+  -voting system (post method at /idea/:id, action_vote action, button_to)
+
 v12
   -devise views customization
   -application view customization

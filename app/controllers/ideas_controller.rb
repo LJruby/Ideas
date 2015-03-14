@@ -1,8 +1,9 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_idea, only: [:show, :edit, :update, :destroy, :action_vote]
+  before_action :set_vote, only: [:show, :action_vote]
   before_action :get_statuses, :get_categories, :get_users, only: [:new, :create, :show, :edit, :update, :destroy, :index]
-	before_action :authenticate_user!
-	
+  
 	def get_statuses
     @statuses = Status.all
   end
@@ -14,7 +15,7 @@ class IdeasController < ApplicationController
   def get_users
     @users = User.all
   end
-
+  
   # GET /ideas
   # GET /ideas.json
   def index
@@ -55,7 +56,28 @@ class IdeasController < ApplicationController
       end
     end
   end
-
+  
+  def action_vote
+    if params[:vote_up]
+      @vote = Vote.new(idea_id: params[:id], user_id: current_user.id)
+      respond_to do |format|
+        if @vote.save
+          format.html { redirect_to @idea, notice: 'Vote was successfully created.' }
+          format.json { render :show, status: :created, location: @idea }
+        else
+          format.html { render :show }
+          format.json { render json: @idea.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      @vote.destroy
+      respond_to do |format|
+        format.html { redirect_to @idea, notice: 'Vote was successfully destroyed.' }
+        format.json { render :show, status: :created, location: @idea }
+      end
+    end
+  end
+  
   # PATCH/PUT /ideas/1
   # PATCH/PUT /ideas/1.json
   def update
@@ -76,14 +98,17 @@ class IdeasController < ApplicationController
     @idea.destroy
     respond_to do |format|
       format.html { redirect_to ideas_url, notice: 'Idea was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json { head ote was successfully creat:no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
       @idea = Idea.find(params[:id])
+    end
+    def set_vote
+      @vote = Vote.find_by(idea_id: params[:id], user_id: current_user.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
