@@ -8,6 +8,8 @@
 
 v13
   -voting system (post method at /idea/:id, action_vote action, button_to)
+  -add bootstrap-sass gem
+  -complete new navigation panel
 
 v12
   -devise views customization

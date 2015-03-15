@@ -1,14 +1,13 @@
-
 <% if @ideas.count == 0 %>
   <br>
-  <em>No ideas found</em>
+  <em style="color: red">No ideas found</em>
   <br>
 <% else %>
 
 <% @statuses.each do |status| %>
 	<% if status.ideas.count > 0 %>
 	<h1>Ideas with status <%= status.name %>:</h1>
-	<table>
+	<table class='table table-condensed table-striped'>
 		<thead>
 			<tr>
 				<th>Title</th>
@@ -41,8 +40,3 @@
 <% end %>
 <% end %>
 
-<br>
-
-<%= link_to 'New Idea', new_idea_path %>
-
-<br>

@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>*<br>
+    <%= f.label "Title*" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Description" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :status_id %>*<br>
+    <%= f.label "Status*" %><br>
     <%= f.select :status_id, options_for_select(@statuses.collect{ |stat| [ stat.name, stat.id ] }), {prompt: 'Select status'} %>
   </div>
   <div class="field">
-    <%= f.label :category_id %>*<br>
+    <%= f.label "Category*" %><br>
     <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.name, cat.id ] }), {prompt: 'Select category'}  %>
   </div>
   <% unless (current_page?(action: 'new') || !f.object.attachment?) %>
