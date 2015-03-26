@@ -10,6 +10,7 @@ v14
   -introduce selenium-webdriver (+faker) testing
   -fixed 'edit' access for 'show' view
   -edit now picks the current status and category
+  -destroying associated vote entries (setting dependency in idea model)
 
 v13
   -voting system (post method at /idea/:id, action_vote action, button_to)

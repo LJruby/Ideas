@@ -1,7 +1,6 @@
 require 'selenium-webdriver'
 require 'faker'
 
-
 $browser=Selenium::WebDriver.for :ff
 
 def LogIn
