@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label "Status*" %><br>
-    <%= f.select :status_id, options_for_select(@statuses.collect{ |stat| [ stat.name, stat.id ] }), {prompt: 'Select status'} %>
+    <%= f.select :status_id, options_for_select(@statuses.collect{ |stat| [ stat.name, stat.id ] }, @idea.status.id), {prompt: 'Select status'} %>
   </div>
   <div class="field">
     <%= f.label "Category*" %><br>
-    <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.name, cat.id ] }), {prompt: 'Select category'}  %>
+    <%= f.select :category_id, options_for_select(@categories.collect{ |cat| [ cat.name, cat.id ] }, @idea.category.id), {prompt: 'Select category'}  %>
   </div>
   <% unless (current_page?(action: 'new') || !f.object.attachment?) %>
   <div class="field">
