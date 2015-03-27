@@ -4,12 +4,12 @@
 
 * Rails 4.2.0
 
-* Application set-up: 
-  git clone https://github.com/LJruby/Ideas.git,
-  cd Ideas,
-  rake db:migrate,
-  rake db:seed,
-  rails s,
+Application set-up:
+  -git clone https://github.com/LJruby/Ideas.git
+  -cd Ideas
+  -rake db:migrate
+  -rake db:seed
+  -rails s
 
 * Idea scaffold app enhancements:
 
