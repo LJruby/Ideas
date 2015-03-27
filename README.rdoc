@@ -11,7 +11,7 @@ Application set-up:
   -rake db:seed
   -rails s
 
-* Idea scaffold app enhancements:
+Idea scaffold app enhancements:
 
 v15
   -before_action in application_controller.rb
