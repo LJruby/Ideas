@@ -17,6 +17,7 @@ v15
   -before_action in application_controller.rb
   -seeds on Statuses and Categories
   -added app set-up instructions
+  -git ignore
 
 v14
   -introduce selenium-webdriver (+faker) testing
