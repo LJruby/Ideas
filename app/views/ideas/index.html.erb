@@ -28,9 +28,9 @@
 					<td><%= idea.votes.count %></td>
 					<td><%= idea.category.name %></td>
 					<td><%= idea.attachment_file_name %></td>
-					<td><%= link_to 'Show', idea %></td>
-					<td><%= link_to_if idea.user==current_user, 'Edit', edit_idea_path(idea) %></td>
-					<td><%= link_to_if idea.user==current_user, 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					<td class="actions"><%= link_to 'Show', idea, class: 'btn btn-xs btn-default' %></td>
+					<td class="actions"><%= link_to_if idea.user==current_user, 'Edit', edit_idea_path(idea), class: 'btn btn-xs btn-primary' %></td>
+					<td class="actions"><%= link_to_if idea.user==current_user, 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
         </tr>
 				<% end %>
 			<% end %>

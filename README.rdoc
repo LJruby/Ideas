@@ -14,7 +14,8 @@ Application set-up:
 Idea scaffold app enhancements:
 
 v16
-  -footer
+  -create footer
+  -add buttons
 
 v15
   -before_action in application_controller.rb

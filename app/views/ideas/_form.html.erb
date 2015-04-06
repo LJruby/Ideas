@@ -48,6 +48,7 @@
 		<%= f.hidden_field :user_id, :value => current_user.id %><br>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', class: 'btn btn-xs btn-primary' %>
   </div>
 <% end %>
+<br>

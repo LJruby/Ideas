@@ -19,12 +19,12 @@
 </p>
 
 <% if @vote.nil? %>
-<p>
-  <%= button_to 'Vote up', action: 'action_vote', vote_up: true %>
+<p class="actions">
+  <%= button_to 'Vote up', {action: 'action_vote', vote_up: true}, {class: 'btn btn-xs btn-primary'} %>
 </p>
 <% else %>
 <p>
-  <%= button_to 'Vote down', action: 'action_vote' %>
+  <%= button_to 'Vote down', {action: 'action_vote'}, {class: 'btn btn-xs btn-danger'} %>
 </p>
 <% end %>
 
